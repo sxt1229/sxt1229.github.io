@@ -19,11 +19,27 @@
 			- TWAS ANALYSIS <br />
 		</h1>
 		<div>
-			Perform TWAS analysis using FUSION (<a href="http://gusevlab.org/projects/fusion/" target="_blank">http://gusevlab.org/projects/fusion/</a>). We employed H3K27ac peak and DNA methylation data ( data from <a href="http://eqtl.uchicago.edu/jointLCL/" target="_blank">http://eqtl.uchicago.edu/jointLCL/</a>)<br />
-		</div>
-		<p>
-			Find significant peaks (whose TWAS.P.Bonferroni &lt; 0.05 ). Then, select those in the significant gene area ([gene start position - 100kb, gene end position +100kb]). Significant genes are from Expression-TWAS results.
-		</p>
+	<p>
+		Perform TWAS analysis using FUSION (<a href="http://gusevlab.org/projects/fusion/" target="_blank">http://gusevlab.org/projects/fusion/</a>) employing two data-set: H3K27ac peak and DNA methylation data ( data from <a href="http://eqtl.uchicago.edu/jointLCL/" target="_blank">http://eqtl.uchicago.edu/jointLCL/</a>).
+	</p>
+	<p>
+		1.&nbsp; Compute functional weights for each locus. We used FUSION default setting here: 5 folds of cross-validation, using 0.01 as minimum heritability p-value for which to compute weights. We employed LASSO and Elastic-net regression (with mixing parameter of 0.5) in this part.
+	</p>
+	<p>
+		2.&nbsp; Do typical TWAS analysis. It takes pre-computed weights together with disease
+ GWAS summary statistics to estimate the association of each locus to 
+diseases.
+	</p>
+	<p>
+		<br />
+	</p>
+	<p>
+		We show the results below. Find significant peaks (whose TWAS.P.Bonferroni &lt; 0.05 ). Then, 
+select those in the significant gene area ([gene start position - 100kb,
+ gene end position +100kb]). Significant genes are from Expression-TWAS 
+results.
+	</p>
+</div>
 	</div>
 </div>
 
